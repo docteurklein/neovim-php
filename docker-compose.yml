@@ -1,0 +1,21 @@
+neovim:
+    build: neovim
+    environment:
+        NVIM_LISTEN_ADDRESS: '0.0.0.0:6666'
+    ports:
+        - '6666:6666'
+    tty: true
+    stdin_open: true
+    volumes:
+        - './:/usr/src/app'
+
+php:
+    build: .
+    command: php subscribe.php
+    links:
+        - neovim
+    environment:
+        NVIM_LISTEN_ADDRESS: 'tcp://neovim:6666'
+    volumes:
+        - './:/usr/src/app'
+

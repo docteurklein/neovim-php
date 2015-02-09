@@ -1,0 +1,16 @@
+{
+    "require": {
+        "react/socket-client": "0.4.*",
+        "php": ">=5.6",
+        "ext-msgpack": ">=0.5.7",
+        "nikic/php-parser": "v2.0.0alpha1",
+        "andrewsville/php-token-reflection": "^1.4",
+        "phpunit/php-token-stream": "^1.4"
+    },
+    "autoload": {
+        "psr-0": {
+            "Nvim": "src"
+        }
+    }
+
+}
